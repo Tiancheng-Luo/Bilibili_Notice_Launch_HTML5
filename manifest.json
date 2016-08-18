@@ -1,0 +1,26 @@
+{
+  "name": "bilibili-launch_HTML5",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "检测是否启动HTML5播放器，并去除播放器中广告的Chrome插件",
+  "content_scripts": [
+      {
+        "js": ["jquery.min.js","LG.js"],
+        "matches": ["*://*.bilibili.com/video/av*"]
+      }
+  ],
+  "browser_action": {
+      "default_icon": "images/48.png",
+      "icon": {
+         "128": "images/128.png",
+         "16": "images/16.png",
+         "48": "images/48.png"
+      }
+   },
+  "icons": {
+    "16": "images/16.png",
+    "48": "images/48.png",
+    "128": "images/128.png"
+  },
+  "permissions": ["http://*/*","https://*/*"]
+}
