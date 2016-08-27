@@ -2,8 +2,12 @@
  * Created by LG on 2016-08-18.
  */
  $(function () {
-     var btn_wrap = $(".bgray-btn-wrap");
-
+     var On = false;
+     //TODO
+     //判断的方法待改善
+     if($(".bgray-btn-wrap").first().text()=="HTML5播放器Flash播放器意见反馈"){
+        On = true;
+     }
      function Recheck () {
         console.log('还没刷出广告，进行Recheck()')
         var ad_node_check =$(".bilibili-player-promote-wrap");
@@ -16,7 +20,7 @@
             }
         }, 1000);
     }
-    if(btn_wrap.length){
+    if(On){
         //1,去掉广告
         var ad_node =$(".bilibili-player-promote-wrap");
         $(".bgray-btn-wrap div:first-child").click(function() {
@@ -47,4 +51,4 @@
        }
    }
  console.log("bilibili-launch_HTML5 is runing...");
-});
+});S
