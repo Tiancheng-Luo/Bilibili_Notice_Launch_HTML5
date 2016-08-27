@@ -26,7 +26,6 @@
             console.log('广告走开！！');
             ad_node.remove();
         }else{
-                //选的是flash播放器也会走这
                 //如果选择的是Flash，提示是否选择HTML5
                 if($(".bgray-btn-wrap").children(".active").length){
                     if($(".bgray-btn-wrap").children(".active").text()=="Flash播放器"){
@@ -38,7 +37,7 @@
                         }
                     }
                 }
-                //网速不好，还没有刷出来
+                //网速不好，还没有刷出来的情况
                 Recheck ();
             }
         }else{
